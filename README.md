@@ -4,9 +4,10 @@
 
 # A little about me:
 
-- I am undertaking a degree in Bachelors of Science majoring in Computer Science and Statistics
-- I am taking STATS 220 because I want to familiarise myself with R programming Language
+- I am undertaking a degree in *Bachelors of Science majoring in Computer Science and Statistics*
+- I am taking **STATS 220** because I want to familiarise myself with R programming Language
 - I am interested in learning about the different feature of R programming an how it enables us to to perform statistical analysis
+- **Math is fun**... sometimes
 
 # What is my morning routine?
 
