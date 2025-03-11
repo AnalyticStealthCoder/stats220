@@ -17,6 +17,6 @@
 4. Shower
 5. Head to uni (RIP)
 
-My Go-to website when I'm fried is: ![](https://www.youtube.com) or ![](http://netflix.com/)
+My Go-to website when I'm fried is: [Youtube](https://www.youtube.com) or [Netflix](http://netflix.com/)
 
 A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif)
