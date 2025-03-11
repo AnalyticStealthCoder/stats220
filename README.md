@@ -1,8 +1,8 @@
-# stats220
+### stats220
 
-This is my repo for STATS 220. 
+## This is my repo for STATS 220. 
 
-A little about me:
+# A little about me:
 
 - I am undertaking a degree in Bachelors of Science majoring in Computer Science and Statistics
 - I am taking STATS 220 because I want to familiarise myself with R programming Language
