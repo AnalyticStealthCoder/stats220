@@ -8,6 +8,34 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 library(tidyverse)
 source("exploration.R")
 
+median_bus_duration <- median(latest_data$trip_duration_minutes)
+
+avg_crowdedness <- mean(latest_data$crowdedness)
+
+proportion_of_delays <- mean(latest_data$bus_delayed == 'Yes')
+
+most_common_time <- names(sort(table(latest_data$time_of_day), decreasing = TRUE))[1]
+
+
+# Bar Charts #
+
+delays_by_crowdedness <- ggplot(latest_data, aes(x = factor(crowdedness), fill = bus_delayed)) + 
+  geom_bar(position = "fill") + 
+  labs(title = "Proportion of Delayed Buses by Crowdedness Level",
+       caption = "Source: Google forms", 
+       x = "Crowdedness Level (1 = Least, 5 = Most)", y = "Proportion") +
+  scale_fill_manual(values = c("No" = "green", "Yes" = "red"))
+
+
+
+frequency_of_buses <- ggplot(latest_data) +
+  geom_bar(aes(x = latest_data$bus_number, fill = time_of_day)) +
+  labs(title = "Different Bus Frequencies by Time of Day",
+       subtitle = "Analyzing the frequency of bus trips across different routes and times of the day",
+       caption = "Source: Google Forms",
+       x = "Bus Numbers",
+       y = "Frequency",
+       fill = "Time of Day")
 ```
 
 ```{css}
