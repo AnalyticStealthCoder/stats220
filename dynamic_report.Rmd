@@ -96,5 +96,3 @@ The x-axis represents different bus numbers, while the y-axis shows the frequenc
 The bus route 70/72X has the highest frequency, especially in the morning and night. Other commonly used routes include 27H/T/W and 24B.
 This visualisation helps identify peak travel times for each bus route, which can be useful for planning and optimising public transport schedules.
 
-
-
