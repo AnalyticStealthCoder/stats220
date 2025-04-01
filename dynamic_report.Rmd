@@ -6,7 +6,6 @@ output: html_fragment
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 library(tidyverse)
-source("exploration.R")
 
 csv_file <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vRcoe9Hx4MxJmMeqYlMVWlc_FUQvFPn1DtbO8Qnqz0T3Su6kIxJLaWHnNV9rRN_YVoFP_iWxiS8vDTX/pub?output=csv"
 
