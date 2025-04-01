@@ -1,0 +1,100 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+library(tidyverse)
+source("exploration.R")
+
+```
+
+```{css}
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Headers */
+h1 {
+  font-size: 2.2em;
+  color: #222;
+  border-bottom: 3px solid #007acc;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #007acc;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+  margin-top: 25px;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #444;
+}
+```
+
+# Overview
+
+This report explores the bus trip dataset, and focuses on factors such as trip duration, crowdedness, bus delays, bus numbers and time of day bus trips occurred. All these factors were taken into consideration to provide insightful information about bus trips.
+
+All Data collected for the following summaries are all from a Google forms, through observational logging.
+
+
+# Summary Statistics
+
+## Median Bus trip duration:
+
+**`r paste("The median trip duration is", median_bus_duration, "minutes.")`**, meaning that half of the recorded trips were shorter than this duration and half were longer.
+
+## Average Crowdedness:
+
+On a scale from 1 (least crowded) to 5 (most crowded), the average crowdedness level across all bus trips was **`r round(avg_crowdedness, 2)`**. This suggests that buses were typically **moderately crowded**.
+
+## Proportion of delayed buses:
+
+**`r paste0("About ", round(proportion_of_delays * 100, 1), "% of bus trips experienced delays.")`** This highlights how frequently delays occur and could be useful for assessing bus reliability.
+
+## Most common time buses were taken:
+
+**The most frequent time period for bus trips** was **`r most_common_time`**, indicating when buses were most in demand.
+
+
+
+
+# Bar Charts
+
+
+## Proportion of Delayed Buses by Crowdedness Level 
+```{r}
+delays_by_crowdedness
+```
+
+This bar chart shows the relationship between bus crowdedness levels (x-axis) and the proportion of buses that were delayed (y-axis).  
+The green bars represent buses that were not delayed, while the red bars represent buses that experienced delays.  
+The pattern that can be identified is that as crowdedness increases, the proportion of delayed buses also increases. This shows that as buses get more crowded, there is higher likeliness that bus may be delayed.
+
+
+
+
+## Frequency of Different Buses
+```{r}
+frequency_of_buses
+```
+
+This bar chart displays how frequently different bus routes were taken at various times of the day.  
+The x-axis represents different bus numbers, while the y-axis shows the frequency of trips recorded.
+The bus route 70/72X has the highest frequency, especially in the morning and night. Other commonly used routes include 27H/T/W and 24B.
+This visualisation helps identify peak travel times for each bus route, which can be useful for planning and optimising public transport schedules.
+
+
+
