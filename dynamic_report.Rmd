@@ -8,6 +8,19 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 library(tidyverse)
 source("exploration.R")
 
+csv_file <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vRcoe9Hx4MxJmMeqYlMVWlc_FUQvFPn1DtbO8Qnqz0T3Su6kIxJLaWHnNV9rRN_YVoFP_iWxiS8vDTX/pub?output=csv"
+
+logged_data <- read_csv(csv_file)
+
+
+latest_data <- logged_data %>%
+  rename(timestamp = 1,
+         trip_duration_minutes = 2,
+         bus_number = 3,
+         time_of_day = 4,
+         crowdedness = 5,
+         bus_delayed = 6)
+
 median_bus_duration <- median(latest_data$trip_duration_minutes)
 
 avg_crowdedness <- mean(latest_data$crowdedness)
